@@ -2,6 +2,7 @@
 
 package com.learnkmp.myblog.network
 
+import com.learnkmp.myblog.SERVER_PORT
 import io.ktor.client.HttpClient
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.plugins.defaultRequest
@@ -19,6 +20,6 @@ fun createHttpClient() = HttpClient {
     }
     defaultRequest {
         host = "0.0.0.0"
-        port = 8081
+        port = SERVER_PORT
     }
 }

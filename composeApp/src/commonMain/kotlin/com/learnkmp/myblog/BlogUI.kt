@@ -19,10 +19,33 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.learnkmp.myblog.model.Post
 import com.learnkmp.myblog.model.SamplePosts
+import com.learnkmp.myblog.network.PostApi
+import com.learnkmp.myblog.network.createHttpClient
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun BlogApp(posts: List<Post>) {
+fun BlogApp() {
+    val httpClient = remember { createHttpClient() }
+    val postApi = remember { PostApi(httpClient) }
+    var posts by remember { mutableStateOf<List<Post>>(emptyList()) }
+    var isLoading by remember { mutableStateOf(true) }
+
+    LaunchedEffect(Unit) {
+        try {
+            val fetchedPosts = postApi.getAllPosts()
+            if (fetchedPosts.isNotEmpty()) {
+                posts = fetchedPosts
+            } else {
+                posts = SamplePosts.allPosts
+            }
+        } catch (e: Exception) {
+            println("Error fetching posts: ${e.message}")
+            posts = SamplePosts.allPosts
+        } finally {
+            isLoading = false
+        }
+    }
+
     var selectedPost by remember { mutableStateOf<Post?>(null) }
 
     MaterialTheme {
@@ -48,7 +71,9 @@ fun BlogApp(posts: List<Post>) {
             }
         ) { paddingValues ->
             Box(modifier = Modifier.padding(paddingValues).fillMaxSize()) {
-                if (selectedPost == null) {
+                if (isLoading) {
+                    CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
+                } else if (selectedPost == null) {
                     PostList(posts = posts) { post ->
                         selectedPost = post
                     }
@@ -158,7 +183,7 @@ fun PostDetail(post: Post) {
 @Preview
 @Composable
 fun BlogAppPreview() {
-    BlogApp(posts = SamplePosts.allPosts)
+    BlogApp()
 }
 
 @Preview
