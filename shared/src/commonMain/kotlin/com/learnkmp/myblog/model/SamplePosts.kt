@@ -1,0 +1,92 @@
+package com.learnkmp.myblog.model
+
+object SamplePosts {
+    val post1 = Post(
+        id = "6822d2c372a97c0001e3cd89",
+        uuid = "165b46f1-77f8-4035-bed1-09b41a1e71e8",
+        title = "Why I have 4 names",
+        slug = "why-i-have-4-names",
+        mobiledoc = "",
+        lexical = "",
+        html = "<p>Why I have 4 names.You might have noticed lately that I use Mykola and Nikolay interchangeably. I also have 2 other names that I use - Nick and Kolya (Коля). Let me explain.</p>",
+        commentId = "6822d2c372a97c0001e3cd89",
+        plaintext = "Why I have 4 names.You might have noticed lately that I use Mykola and Nikolay interchangeably. I also have 2 other names that I use - Nick and Kolya (Коля). Let me explain.\n\nI come from Ukraine but from a Russian-speaking family. At birth, I was given the name Nikolay - which is a Russian variant of Ukrainian Mykola. Don’t ask me why Ukrainians decided that Mykola == Nikolay, but that’s how it is. So, right at birth I was destined for confusion when I was to travel abroad.\n\nLike many other nations, Ukrainians have a concept of “official” and “friendly” names. The “friendly” name is used for people you know - i.e., friends and family. My “official” name is Nikolay (Mykola), but my “friendly” name is Kolya (Коля). And this is where another problem surfaced.\n\nIt so turns out that many people across the world have a hard time pronouncing the “lya” part in “Kolya” correctly. So when at the age of 12 I moved to the United States with my mother I quickly realized that either I find an alternative for Kolya or I was going to be stuck with people calling me Kola - like Coca-Cola.\n\nTo avoid being associated with a beverage I decided to settle on “Nick”. Nick seemed like a good short alternative for Nikolay. I even got a t-shirt and attached big letters N-I-C-K on the front - which I thought was cool at 12 years old.\n\nSo there you have it. If you see me using either of those 4 names here or in my newsletter - now you know why :)",
+        featureImage = "__GHOST_URL__/content/images/2025/05/photo-1577351594944-a5586c757d8c.jpeg",
+        featured = 0,
+        type = "post",
+        status = "published",
+        locale = "",
+        visibility = "public",
+        emailRecipientFilter = "status:free",
+        createdAt = "2025-05-13T05:04:03.000Z",
+        updatedAt = "2025-05-13T05:06:24.000Z",
+        publishedAt = "2025-05-13T05:06:24.000Z",
+        customExcerpt = "",
+        codeinjectionHead = "",
+        codeinjectionFoot = "",
+        customTemplate = "",
+        canonicalUrl = "",
+        newsletterId = "68200bbc7fa6a70008c437e7",
+        showTitleAndFeatureImage = 1
+    )
+
+    val post2 = Post(
+        id = "2",
+        uuid = "uuid-2",
+        title = "Getting Started with KMP",
+        slug = "getting-started-with-kmp",
+        mobiledoc = "",
+        lexical = "",
+        html = "<p>Kotlin Multiplatform is awesome!</p>",
+        commentId = "2",
+        plaintext = "Kotlin Multiplatform (KMP) is a powerful technology that allows you to share code between different platforms like Android, iOS, Web, and Desktop. It's not about UI sharing (though Compose Multiplatform does that), but about sharing business logic, data models, and networking code.\n\nIn this post, we'll explore how to set up your first KMP project and what are the best practices for sharing code efficiently.",
+        featureImage = "",
+        featured = 1,
+        type = "post",
+        status = "published",
+        locale = "",
+        visibility = "public",
+        emailRecipientFilter = "",
+        createdAt = "2026-01-10T10:00:00.000Z",
+        updatedAt = "2026-01-10T10:00:00.000Z",
+        publishedAt = "2026-01-10T12:00:00.000Z",
+        customExcerpt = "A brief introduction to Kotlin Multiplatform.",
+        codeinjectionHead = "",
+        codeinjectionFoot = "",
+        customTemplate = "",
+        canonicalUrl = "",
+        newsletterId = "",
+        showTitleAndFeatureImage = 1
+    )
+
+    val post3 = Post(
+        id = "3",
+        uuid = "uuid-3",
+        title = "Compose Multiplatform for Web",
+        slug = "compose-multiplatform-web",
+        mobiledoc = "",
+        lexical = "",
+        html = "<p>Compose for Web is here!</p>",
+        commentId = "3",
+        plaintext = "Compose Multiplatform for Web allows you to build beautiful user interfaces using Kotlin and the same declarative patterns you use for Android. It leverages Kotlin/Wasm or Kotlin/JS to target the browser.\n\nWith the recent advancements in WebAssembly (Wasm), Compose for Web is becoming faster and more reliable than ever.",
+        featureImage = "",
+        featured = 0,
+        type = "post",
+        status = "published",
+        locale = "",
+        visibility = "public",
+        emailRecipientFilter = "",
+        createdAt = "2026-01-15T15:00:00.000Z",
+        updatedAt = "2026-01-15T15:00:00.000Z",
+        publishedAt = "2026-01-15T15:30:00.000Z",
+        customExcerpt = "Exploring the capabilities of Compose Multiplatform on the web.",
+        codeinjectionHead = "",
+        codeinjectionFoot = "",
+        customTemplate = "",
+        canonicalUrl = "",
+        newsletterId = "",
+        showTitleAndFeatureImage = 1
+    )
+
+    val allPosts = listOf(post1, post2, post3)
+}
