@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.kotlinJvm)
     alias(libs.plugins.ktor)
+    alias(libs.plugins.kotlinxSerialization)
     application
 }
 
@@ -21,6 +22,10 @@ dependencies {
     implementation(libs.ktor.serialization.kotlinx.json.jvm)
     implementation(libs.ktor.server.content.negotiation.jvm)
     implementation(libs.ktor.server.cors.jvm)
+    implementation(libs.exposed.core)
+    implementation(libs.exposed.dao)
+    implementation(libs.exposed.jdbc)
+    implementation(libs.h2)
     testImplementation(libs.ktor.serverTestHost)
     testImplementation(libs.kotlin.testJunit)
 }

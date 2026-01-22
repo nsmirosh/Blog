@@ -17,4 +17,15 @@ class ApplicationTest {
         assertEquals(HttpStatusCode.OK, response.status)
         assertEquals("Ktor: ${Greeting().greet()}", response.bodyAsText())
     }
+
+    @Test
+    fun testPosts() = testApplication {
+        application {
+            module()
+        }
+        val response = client.get("/posts")
+        assertEquals(HttpStatusCode.OK, response.status)
+        assertTrue(response.bodyAsText().contains("Why I have 4 names"))
+        assertTrue(response.bodyAsText().contains("Getting Started with KMP"))
+    }
 }
