@@ -144,6 +144,9 @@ fun PostSummary(post: Post, onClick: () -> Unit) {
 }
 
 @Composable
+expect fun NotionEmbed(url: String, modifier: Modifier = Modifier)
+
+@Composable
 fun PostDetail(post: Post) {
     Column(
         modifier = Modifier
@@ -176,6 +179,11 @@ fun PostDetail(post: Post) {
                 style = MaterialTheme.typography.bodyLarge,
                 lineHeight = 24.sp
             )
+        }
+
+        post.notionEmbedUrl?.let { url ->
+            Spacer(modifier = Modifier.height(24.dp))
+            NotionEmbed(url = url, modifier = Modifier.fillMaxWidth().height(600.dp))
         }
     }
 }

@@ -43,7 +43,9 @@ data class PostDTO(
     @SerialName("newsletter_id")
     val newsletterId: String = "",
     @SerialName("show_title_and_feature_image")
-    val showTitleAndFeatureImage: Int = 0
+    val showTitleAndFeatureImage: Int = 0,
+    @SerialName("notion_embed_url")
+    val notionEmbedUrl: String? = null
 )
 
 fun PostDTO.toPost() = Post(
@@ -72,5 +74,6 @@ fun PostDTO.toPost() = Post(
     customTemplate = customTemplate,
     canonicalUrl = canonicalUrl,
     newsletterId = newsletterId,
-    showTitleAndFeatureImage = showTitleAndFeatureImage
+    showTitleAndFeatureImage = showTitleAndFeatureImage,
+    notionEmbedUrl = notionEmbedUrl
 )

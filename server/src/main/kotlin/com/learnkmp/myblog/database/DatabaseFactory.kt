@@ -44,6 +44,7 @@ object DatabaseFactory {
                         it[canonicalUrl] = post.canonical_url
                         it[newsletterId] = post.newsletter_id
                         it[showTitleAndFeatureImage] = post.show_title_and_feature_image
+                        it[notionEmbedUrl] = post.notion_embed_url
                     }
                 }
             }
@@ -79,6 +80,7 @@ object DatabaseFactory {
         custom_template = this[PostsTable.customTemplate],
         canonical_url = this[PostsTable.canonicalUrl],
         newsletter_id = this[PostsTable.newsletterId],
-        show_title_and_feature_image = this[PostsTable.showTitleAndFeatureImage]
+        show_title_and_feature_image = this[PostsTable.showTitleAndFeatureImage],
+        notion_embed_url = this[PostsTable.notionEmbedUrl]
     )
 }

@@ -29,6 +29,7 @@ object PostsTable : Table("posts") {
     val canonicalUrl = varchar("canonical_url", 255).nullable()
     val newsletterId = varchar("newsletter_id", 255).nullable()
     val showTitleAndFeatureImage = integer("show_title_and_feature_image")
+    val notionEmbedUrl = text("notion_embed_url").nullable()
 
     override val primaryKey = PrimaryKey(id)
 }

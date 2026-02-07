@@ -26,7 +26,8 @@ data class Post(
     val customTemplate: String = "",
     val canonicalUrl: String = "",
     val newsletterId: String = "",
-    val showTitleAndFeatureImage: Int = 0
+    val showTitleAndFeatureImage: Int = 0,
+    val notionEmbedUrl: String? = null
 )
 
 fun Post.toDTO() = PostDTO(
@@ -55,5 +56,6 @@ fun Post.toDTO() = PostDTO(
     customTemplate = customTemplate,
     canonicalUrl = canonicalUrl,
     newsletterId = newsletterId,
-    showTitleAndFeatureImage = showTitleAndFeatureImage
+    showTitleAndFeatureImage = showTitleAndFeatureImage,
+    notionEmbedUrl = notionEmbedUrl
 )

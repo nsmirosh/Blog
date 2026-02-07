@@ -56,7 +56,8 @@ object SamplePosts {
         customTemplate = "",
         canonicalUrl = "",
         newsletterId = "",
-        showTitleAndFeatureImage = 1
+        showTitleAndFeatureImage = 1,
+        notionEmbedUrl = "https://bright-satin-144.notion.site/ebd//2c0921b40950805190eef103c9248acf"
     )
 
     val post3 = Post(

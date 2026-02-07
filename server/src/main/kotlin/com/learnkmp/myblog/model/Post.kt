@@ -29,5 +29,6 @@ data class Post(
     val custom_template: String?,
     val canonical_url: String?,
     val newsletter_id: String?,
-    val show_title_and_feature_image: Int
+    val show_title_and_feature_image: Int,
+    val notion_embed_url: String? = null
 )
